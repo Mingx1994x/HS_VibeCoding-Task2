@@ -60,10 +60,13 @@
     }
 
     img {
-      max-width: 100%;
+      width: 100%;
       height: auto;
+      max-width: 100%;
       display: block;
+      object-fit: cover;
       border-radius: 8px;
+      /* 若你需要圓角，可保留 */
     }
 
     a {
@@ -83,6 +86,24 @@
       overflow: hidden;
       clip: rect(1px, 1px, 1px, 1px);
       white-space: nowrap;
+    }
+
+    /* figure 共用 RWD 圖片容器修正 */
+    .responsive-figure {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      display: block;
+      overflow: hidden;
+      /* 防止圖片溢出 */
+    }
+
+    .responsive-figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
     }
 
     /* CSS:BASE-END */
@@ -421,9 +442,9 @@
             </p>
           </div>
 
-          <figure class="hero-visual" aria-hidden="true">
-            <img src="https://source.unsplash.com/1200x800/?developer,laptop,workspace" alt="在筆電前撰寫程式碼的前端開發者"
-              loading="lazy" />
+          <figure class="hero-visual responsive-figure" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
+              alt="在筆電前撰寫程式碼的前端開發者" loading="lazy" />
           </figure>
         </div>
       </section>
@@ -443,8 +464,9 @@
             </p>
           </div>
 
-          <figure class="about-figure" aria-hidden="true">
-            <img src="https://source.unsplash.com/800x600/?workspace,desk,computer" alt="整潔的工作空間與筆電" loading="lazy" />
+          <figure class="about-figure responsive-figure" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+              alt="整潔的工作空間與筆電" loading="lazy" />
           </figure>
         </div>
       </section>
@@ -482,13 +504,15 @@
             <article class="project-card" role="listitem">
               <h3 class="project-title">專案範例 A</h3>
               <p class="project-desc">簡短描述：靜態網站 / RWD 範例。示意圖如下。</p>
-              <img src="https://source.unsplash.com/800x600/?web,design" alt="網頁設計示意圖" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80"
+                alt="網頁設計示意圖" loading="lazy" />
             </article>
 
             <article class="project-card" role="listitem">
               <h3 class="project-title">專案範例 B</h3>
               <p class="project-desc">簡短描述：互動式前端應用（此處為占位）。</p>
-              <img src="https://source.unsplash.com/800x600/?code,programming" alt="程式碼與開發示意圖" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
+                alt="程式碼與開發示意圖" loading="lazy" />
             </article>
           </div>
         </div>
